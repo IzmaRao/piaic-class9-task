@@ -4,8 +4,8 @@ import os
 from colorama import Back, Fore, Style
 
 def add_contacts():
-    name : str = input("Enter name: ")
-    phone : str = input("Enter phone number: ")
+    name : str = input("Enter name: ").strip().lower()
+    phone : str = input("Enter phone number: ").strip().lower()
     
     with open("contacts.csv", "r") as file:
         reader = csv.DictReader(file)
